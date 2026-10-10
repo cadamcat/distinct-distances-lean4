@@ -8,17 +8,18 @@ set -euo pipefail
 
 cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.."
 export LEAN_NUM_THREADS="${LEAN_NUM_THREADS:-4}"
-FROZEN=324083b
+# Git blob id of the frozen Challenge.lean (unchanged since the statement was fixed; v1.0.0 has it).
+FROZEN_BLOB=21648f72616ee8911640b58864ddd2f072ba4f9c
 
 lake build DistinctDistances.Main || exit 1
 
-# Challenge.lean is frozen: the release check is an empty diff against FROZEN.
-if ! git diff --quiet "$FROZEN" -- Challenge.lean; then
-  echo "FAIL: Challenge.lean differs from frozen commit $FROZEN" >&2
-  git diff --stat "$FROZEN" -- Challenge.lean >&2 || true
+# Challenge.lean is frozen: its content must hash to FROZEN_BLOB.
+ACTUAL_BLOB=$(git hash-object Challenge.lean)
+if [ "$ACTUAL_BLOB" != "$FROZEN_BLOB" ]; then
+  echo "FAIL: Challenge.lean differs from the frozen statement (blob $ACTUAL_BLOB, expected $FROZEN_BLOB)" >&2
   exit 1
 fi
-echo "Challenge.lean matches frozen commit $FROZEN"
+echo "Challenge.lean matches the frozen statement (blob $FROZEN_BLOB)"
 
 # The copied Formal Conjectures definitions are identical in Challenge.lean and the proof.
 python3 scripts/check_target.py defs

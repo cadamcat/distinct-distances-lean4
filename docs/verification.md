@@ -24,7 +24,7 @@ LEAN_NUM_THREADS=4 ./scripts/verify.sh
 The script runs six checks in order and stops at the first failure:
 
 1. `lake build DistinctDistances.Main` builds the theorem and every project module it imports.
-2. `git diff --quiet 324083b -- Challenge.lean` checks that `Challenge.lean` matches its frozen commit `324083b`.
+2. `git hash-object Challenge.lean` must equal `21648f72616ee8911640b58864ddd2f072ba4f9c`, the frozen statement's blob id, which is also `git rev-parse v1.0.0:Challenge.lean`.
 3. `python3 scripts/check_target.py defs` checks that the block between the `BEGIN` and `END FORMAL CONJECTURES DEFINITIONS` markers is identical in `Challenge.lean` and `DistinctDistances/Defs.lean`, and that it holds only the copied declarations (`distanceSet`, `distinctDistances`). The proof never imports `Challenge.lean`; this block is what its definitions share with the challenge.
 4. `python3 scripts/check_target.py statement` elaborates `Challenge.lean` and, in a separate Lean run, `DistinctDistances.Main`. Each run prints, with `set_option pp.all true`, the type of `DistinctDistances.jsp_000900` and the declarations `distanceSet` and `distinctDistances`. The two outputs must be identical. Separate runs are needed because both modules declare the same names.
 5. `lake env lean --trust=0 scripts/Axioms.lean` prints the axioms of `DistinctDistances.jsp_000900`, and `scripts/check_axioms.py` parses the report. The accepted axioms are `propext`, `Classical.choice` and `Quot.sound`.
