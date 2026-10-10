@@ -1,0 +1,132 @@
+# formalization.yaml (v0.4)
+version: "v0.4"
+
+project:
+  name: "A Lean 4 formalization of the higher-dimensional Erdős distinct-distances bound (JSP-000900)"
+  description: >-
+    A complete Lean 4 formalization of OpenAI's theorem that for each fixed
+    dimension d >= 3, every finite point set in Euclidean d-space determines at
+    least c_d * n^(2/d) distinct distances, with a matching C_d * n^(2/d) upper
+    bound realized by grid subsets. The target is DistinctDistances.jsp_000900
+    as stated in Challenge.lean. The formal proof follows OpenAI's paper. It
+    takes the polynomial isolation interface (physical separators and isolation
+    polynomials) from OpenAI's Lean library openai/math, and formalizes the
+    rest of the paper: the polynomial method, incidence and ruling geometry,
+    motion and planar inputs, curve and rank bridges, the secant/partition
+    assembly, and the final induction establishing the lower bound, together
+    with the grid construction for the matching upper bound. The final theorem
+    depends only on the axioms propext, Classical.choice and Quot.sound.
+  authors:
+    - "Yao Xu"
+  responsible_maintainers:
+    - "Yao Xu"
+  license: "Apache-2.0"
+
+sources:
+  - title: "The higher-dimensional Erdős distinct-distances conjecture"
+    authors: ["OpenAI"]
+    id: "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-higher-dimensional-Erdos-distinct-distances-conjecture-September-23-2026/paper.pdf"
+    type: "paper"
+    location: "September 23, 2026; Theorem thm:main (thm:main), proved across the paper's sections"
+    relationship: "formalizes"
+    author_endorsement: "not-contacted"
+
+related_formalizations:
+  - id: "https://github.com/google-deepmind/formal-conjectures/blob/660712921cf75e22b926536e8430cb613517e3ff/FormalConjectures/ErdosProblems/1083.lean"
+    relationship: "other"
+    note: >-
+      Formal Conjectures states Erdos1083.erdos_1083 with sorry, asking for the
+      weaker n^(2/d - o(1)) lower-bound form. Challenge.lean copies the
+      definitions it uses (distanceSet, distinctDistances) from
+      FormalConjecturesForMathlib/Geometry/Metric.lean at the same commit; the
+      target DistinctDistances.jsp_000900 states the exact-order two-sided
+      bound with n^(2/d), following the paper. This repository proves it.
+  - id: "https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean"
+    relationship: "builds-on"
+    note: >-
+      The project imports OAI.Combinatorics.Distances.PolynomialIsolation,
+      which supplies the physical separators and isolation polynomials for the
+      distance problem, alongside further OAI modules used by the geometric
+      tracks. No OpenAI source is copied.
+
+classification:
+  arxiv: ["math.MG", "math.CO", "cs.LO"]
+  msc2020: ["52C10", "52C35", "68V20"]
+
+status:
+  scope: >-
+    Complete formalization of DistinctDistances.jsp_000900 in the form stated
+    in Challenge.lean, for every dimension d >= 3, with both the lower bound
+    for every finite point set of at least two points and the matching upper
+    bound by some n-point set for every n >= 2, over the definitions copied
+    from Formal Conjectures.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  main_results:
+    - declaration: "DistinctDistances.jsp_000900"
+      file: "DistinctDistances/Main.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "Challenge.json"
+      literature_dependencies: []
+
+automation:
+  methods:
+    - method: "agent"
+      framework: "AI coding agents"
+      tool_setup: >-
+        AI coding agents wrote the Lean code under acceptance criteria set by
+        the author. The target statement was fixed first and checked against
+        the paper. A proof was accepted only if its statement kept the frozen
+        type and its axioms stayed within the three standard axioms, up to
+        frozen statements still open.
+      cost:
+        spend_usd: "subscription-based usage"
+        hardware: "API-only models; builds on an Apple Silicon Mac and on remote Linux build servers"
+  spend_usd: "subscription-based usage"
+  notes: >-
+    The author is responsible for the content. Model agreement was not
+    treated as verification; acceptance rests on the Lean kernel checks
+    described under review.
+
+fidelity:
+  divergences: >-
+    None in the meaning of the statement. Challenge.lean copies Formal
+    Conjectures' definitions verbatim, except that it drops the module-system
+    wrappers. The target strengthens Formal Conjectures' erdos_1083
+    (an n^(2/d - o(1)) lower bound) to the exact-order two-sided bound with
+    n^(2/d) proved in the paper: a lower bound for every point set and a
+    matching upper bound by grid subsets. The distance count is the
+    cardinality of the off-diagonal distance image; ordered pairs contribute
+    one distance per unordered pair by symmetry of dist, checked in
+    Audit/TargetProbes.lean. A copy of the count written without the
+    definitions is proved equivalent to the target in
+    Audit/IndependentRestatement.lean.
+
+review:
+  status: "agent-reviewed"
+  reviewers: []
+  notes: >-
+    scripts/verify.sh builds the theorem, checks that Challenge.lean matches
+    its frozen commit, checks that the copied definitions are identical in
+    Challenge.lean and the proof, compares the elaborated statement and
+    definitions of both modules printed with pp.all, checks that
+    DistinctDistances.jsp_000900 depends only on propext, Classical.choice
+    and Quot.sound, and scans every Lean source for forbidden constructs.
+    Audit/IndependentRestatement.lean proves the target equivalent to a
+    restatement of the distance bound that does not use the copied
+    definitions. No independent human expert has reviewed the formalization.
+
+alignment:
+  namespace: "DistinctDistances"
+  statements:
+    - source: "OpenAI (2026), Theorem thm:main; JSP-000900"
+      lean: "DistinctDistances.jsp_000900"
+      module: "DistinctDistances/Main.lean"
+      status: "proved"
+
+acknowledgements: >-
+  Mathlib and OpenAI's openai/math library supply the underlying theories;
+  the target's definitions come from Google DeepMind's Formal Conjectures.
+  Their authors and licenses are credited in THIRD_PARTY.md and NOTICE.

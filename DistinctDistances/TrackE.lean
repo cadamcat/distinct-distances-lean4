@@ -1,0 +1,43 @@
+import DistinctDistances.TrackE.Basic
+import DistinctDistances.TrackE.FlatCaps
+import DistinctDistances.TrackE.Top
+import DistinctDistances.TrackE.Stars
+import DistinctDistances.TrackE.PairFlats
+import DistinctDistances.TrackE.Graph
+import DistinctDistances.TrackE.Concentration
+import DistinctDistances.TrackE.Contradiction
+import DistinctDistances.TrackE.Directional
+import DistinctDistances.TrackE.SparseCones
+import DistinctDistances.TrackE.Directions
+import DistinctDistances.TrackE.GlobalConcentration
+import DistinctDistances.TrackE.Requests
+import DistinctDistances.TrackE.CommonPhysical
+import DistinctDistances.TrackE.CommonImageTesting
+import DistinctDistances.TrackE.CommonProductLists
+import DistinctDistances.TrackE.CommonRadialImages
+import DistinctDistances.TrackE.CommonSourceSections
+import DistinctDistances.TrackE.CommonRadialDimension
+import DistinctDistances.TrackE.CommonDepthImages
+import DistinctDistances.TrackE.CommonProjectionBudgets
+import DistinctDistances.TrackE.CommonBlockTangents
+import DistinctDistances.TrackE.CommonImageSections
+import DistinctDistances.TrackE.CommonImagePooling
+import DistinctDistances.TrackE.CommonChartGraphMass
+import DistinctDistances.TrackE.CommonIsolation
+import DistinctDistances.TrackE.CommonRankInduction
+import DistinctDistances.TrackE.CommonRankProof
+import DistinctDistances.TrackE.CommonLabelEnvelope
+import DistinctDistances.TrackE.OuterPool
+import DistinctDistances.TrackE.OuterRegularity
+import DistinctDistances.TrackE.OuterDiscard
+import DistinctDistances.TrackE.OuterLift
+import DistinctDistances.TrackE.OuterLiftAux
+import DistinctDistances.TrackE.OuterLiftJets
+import DistinctDistances.TrackE.OuterLiftCurve
+import DistinctDistances.TrackE.OuterLiftSpec
+import DistinctDistances.TrackE.OuterDegree
+import DistinctDistances.TrackE.OuterAssembly
+import DistinctDistances.TrackE.OuterChartRows
+
+/-! Track E: the reduction (`reduction.tex`), the sparse-cones statement (`sparse-cones.tex`)
+and the top node. See the lane's `DESIGN.md`. -/

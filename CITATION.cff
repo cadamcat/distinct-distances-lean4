@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: "If you use this formalization, please cite it using the metadata from this file."
+type: software
+title: "The higher-dimensional Erdős distinct-distances bound, in Lean 4"
+abstract: >-
+  A Lean 4 formalization of OpenAI's theorem that for each fixed dimension
+  d >= 3, every finite point set in Euclidean d-space determines at least
+  c_d * n^(2/d) distinct distances, with a matching C_d * n^(2/d) upper bound
+  realized by grid subsets, stated as DistinctDistances.jsp_000900. The final
+  theorem uses only the axioms propext, Classical.choice and Quot.sound.
+authors:
+  - family-names: Xu
+    given-names: Yao
+repository-code: "https://github.com/cadamcat/distinct-distances-lean4"
+url: "https://github.com/cadamcat/distinct-distances-lean4"
+license: Apache-2.0
+version: v1.0.0
+date-released: "2026-10-10"
+keywords:
+  - Lean 4
+  - formalization
+  - distinct distances
+  - Erdős distance problem
+  - discrete geometry
+references:
+  - type: article
+    authors:
+      - name: OpenAI
+    title: "The higher-dimensional Erdős distinct-distances conjecture"
+    year: 2026
+    url: "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-higher-dimensional-Erdos-distinct-distances-conjecture-September-23-2026/paper.pdf"
+  - type: software
+    authors:
+      - name: OpenAI
+    title: "openai/math"
+    repository-code: "https://github.com/openai/math"
+    commit: adc7f1241b42e322a6451854ab7e4b4c146bf78a
+    license: Apache-2.0
+  - type: software
+    authors:
+      - name: The Formal Conjectures Authors
+    title: "Formal Conjectures"
+    repository-code: "https://github.com/google-deepmind/formal-conjectures"
+    commit: 660712921cf75e22b926536e8430cb613517e3ff
+    license: Apache-2.0
+  - type: software
+    authors:
+      - name: The mathlib Community
+    title: mathlib4
+    repository-code: "https://github.com/leanprover-community/mathlib4"
+    commit: d13f23b723b8a846827a245b89c10fc7d3f11612
+    license: Apache-2.0

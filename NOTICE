@@ -1,0 +1,16 @@
+distinct-distances-lean4
+Copyright 2026 Yao Xu
+
+This project includes a theorem statement and definitions copied from
+Google DeepMind's Formal Conjectures
+(https://github.com/google-deepmind/formal-conjectures), commit
+660712921cf75e22b926536e8430cb613517e3ff, Copyright 2025 The Formal
+Conjectures Authors, licensed under the Apache License, Version 2.0. They are
+in Challenge.lean and DistinctDistances/Defs.lean; THIRD_PARTY.md
+records the upstream files and the changes.
+
+This project depends on OpenAI's openai/math library
+(https://github.com/openai/math), commit
+adc7f1241b42e322a6451854ab7e4b4c146bf78a, in the lean/ directory, licensed
+under the Apache License, Version 2.0. Lake fetches it; no OpenAI source is
+copied into this repository. The upstream repository has no NOTICE file.

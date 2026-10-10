@@ -1,0 +1,18 @@
+import DistinctDistances.TrackA.Intersections
+import DistinctDistances.TrackA.Interpolation
+import DistinctDistances.TrackA.Hilbert
+import DistinctDistances.TrackA.Regularity
+import DistinctDistances.TrackA.Compression
+import DistinctDistances.TrackA.Projection
+import DistinctDistances.TrackA.Depth
+import DistinctDistances.TrackA.RadialGenericDegreeSupport
+import DistinctDistances.TrackA.NarrowActualRootSupport
+import DistinctDistances.TrackA.NarrowCylinderIsolationSupport
+import DistinctDistances.TrackA.CylinderDegreeSupport
+import DistinctDistances.TrackA.NarrowRootBoundSupport
+import DistinctDistances.TrackA.RelativePointBezoutSupport
+import DistinctDistances.TrackA.LocalHilbertCarrierSupport
+
+import DistinctDistances.TrackA.JacobianLocalizedSpanSupport
+
+/-! Track A's polynomial and separated-window projection-depth interfaces. -/
