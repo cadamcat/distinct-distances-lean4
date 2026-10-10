@@ -54,18 +54,19 @@ The project has 751 Lean modules (`DistinctDistances.lean` and the files under `
 
 ## Independent check of v1.0.0
 
-A run of these steps on a fresh clone of the release commit is pending; its results will be recorded here.
+On 10 October 2026 (UTC), release `v1.0.0` (commit `0e56d4c94cd6af4292479c961eb3dff10421ef56`) was cloned from GitHub into an empty scratch directory on a 32-core compute node and checked with the steps of [Fresh checkout](#fresh-checkout), in order:
 
 | Step | Result |
 |---|---|
-| `lake update` | pending |
-| `scripts/apply-oai-patches.sh` | pending |
-| `lake exe cache get`, then `lake build` | pending |
-| `scripts/verify.sh` | pending |
-| `lake env leanchecker --fresh DistinctDistances.Main` | pending |
-| Comparator with [Challenge.json](../Challenge.json) | pending |
+| `lake update` | exit 1 with the `iut: Lake resolved an unexpected checkout at …` hook error described above; the revisions it resolved for all 43 packages equal those in `lake-manifest.json` |
+| `scripts/apply-oai-patches.sh` | exit 0 |
+| `lake exe cache get`, then `lake build` | exit 0 (10181 jobs, 65 minutes); no errors and no `sorry`. The Mathlib cache files were already in the local cache, so nothing was downloaded |
+| `#print axioms DistinctDistances.jsp_000900` | `propext`, `Classical.choice` and `Quot.sound` only |
+| `lake env leanchecker --fresh DistinctDistances.Main` | exit 0 (37 minutes): the kernel replayed the declarations of the main module and of everything it imports, including the cached dependency artifacts |
 
-Release commit: the commit tagged `v1.0.0`. Software Heritage snapshot: pending.
+`scripts/verify.sh` and Comparator were not part of this run.
+
+Software Heritage snapshot: [`swh:1:snp:f64f8482e9bef79632dd44dd664e6ba1bb0c3065`](https://archive.softwareheritage.org/api/1/snapshot/f64f8482e9bef79632dd44dd664e6ba1bb0c3065/) (visit of 2026-10-10 20:01 UTC).
 
 ## Statement fidelity
 
