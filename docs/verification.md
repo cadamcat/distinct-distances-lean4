@@ -85,12 +85,14 @@ The count is the cardinality of the off-diagonal distance image, which is empty 
 
 - [Audit/TargetProbes.lean](../Audit/TargetProbes.lean): the distance set of empty and singleton sets is empty, a two-point set determines exactly one distance, the off-diagonal pair count, and at least one distance for every set with two or more points.
 - [Audit/IndependentRestatement.lean](../Audit/IndependentRestatement.lean): `FidelityProbe.Indep` restates the target with the distance count written out as an off-diagonal image cardinality, without the copied definitions. `FidelityProbe.fc_iff_indep` proves it equivalent to the target. Further examples check the unfolding of `distanceSet` and the same boundary cases.
+- [Audit/NonVacuity.lean](../Audit/NonVacuity.lean): applies both clauses of `jsp_000900` to explicit point sets in dimension three, computes `distinctDistances` on small sets (`{0, e₀}` gives one distance, `{0, e₀, 2e₀}` gives two), and derives the two-sided bound `c n^(2/d) ≤ g_d(n) ≤ C n^(2/d)` for the minimum `g_d(n)` over `n`-point sets, after showing that this minimum is attained.
 
 After `lake build`, check them with:
 
 ```sh
 lake env lean Audit/TargetProbes.lean
 lake env lean Audit/IndependentRestatement.lean
+lake env lean Audit/NonVacuity.lean
 ```
 
 To check the copies against Formal Conjectures itself:
