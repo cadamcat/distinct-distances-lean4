@@ -3,7 +3,7 @@ import DistinctDistances.TrackB.TripleRankTrunc
 import DistinctDistances.TrackB.TripleRankKernelRanks
 
 /-!
-B13 redesign (lane m-b-hilb, 2026-10-10): a TRUE decomposition of
+B13 redesign: a TRUE decomposition of
 `DistinctDistances.TrackB.triple_rank_identity`.
 
 The incidence `Z` is the projective bundle `P(L)` over the base `B`, with
@@ -23,8 +23,7 @@ section ranks:
 Every regularity statement is "up to `d`-torsion" (rank equality for large
 direction degree `s`); no global regular sequences are claimed (they fail on
 non-Cohen–Macaulay bases).  The arithmetic assembly (P5) and the `m ≥ e`
-truncation (P4) are pure combinatorics.  See the lane NOTES for the
-mathematics and the sanity checks (`e = 1`, `e = 2`).
+truncation (P4) are pure combinatorics.
 -/
 
 namespace DistinctDistances.TrackB

@@ -683,7 +683,7 @@ theorem monomial_truncation (e a b m : ℕ) (hab : a + b + 1 ≤ e) (hm : e ≤ 
   -- S0 (δ=0) and S1 (δ=1) as k-sums with C(e,k) factored (see below for full assembly).
   -- The remaining assembly (factoring, R-matching, moments) is routine Finset manipulation
   -- using `inner_zero_eq`, `inner_one_eq`, `fiber_expand`, `truncPoly_eval_form`,
-  -- `neg_one_pow_sub` and `alternating_polynomial_moment_zero`; see NOTES for the arithmetic.
+  -- `neg_one_pow_sub` and `alternating_polynomial_moment_zero`.
   -- Full assembly below (factor C, match R, apply moments).
   have hS0 : (∑ k ∈ Finset.range (e + 1), ∑ l ∈ Finset.range (m + 1), ∑ β ∈ Finset.range (m + 1),
         if k + l + β = m then (-1 : ℚ) ^ (l + β) * (e.choose k : ℚ) *

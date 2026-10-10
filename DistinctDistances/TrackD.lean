@@ -65,4 +65,4 @@ import DistinctDistances.TrackD.Profiles.PairSelection
 import DistinctDistances.TrackD.Profiles.PairSelectionPackages
 import DistinctDistances.TrackD.Profiles.RegularitySequenceAdapters
 
-/-! Track D: `secants.tex` (§4) and `profiles.tex` (§5). See `runs/lanes/lead-d/DESIGN.md`. -/
+/-! Track D: `secants.tex` (§4) and `profiles.tex` (§5). -/

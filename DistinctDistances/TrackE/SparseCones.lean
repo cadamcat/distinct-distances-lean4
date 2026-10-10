@@ -39,7 +39,7 @@ It is the form `red:directions` consumes.
 The proof assembles `prof:pair-selection` (track D) with the four endpoint contradictions of
 `sparse-cones.tex` (`sc:u-common-contra`, `sc:u-outer-lift`, `sc:u-separated-contra`,
 `sc:u-final-curve`); their Lean statements are fixed once track D's piece and profile
-statements are on `main` (see the lane's `DESIGN.md` §3).
+statements are fixed.
 -/
 
 namespace DistinctDistances

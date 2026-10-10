@@ -14,7 +14,7 @@ Definitions used by the reduction (paper §2, `reduction.tex`) and the sparse-co
 frozen before track A's variety model is on `main`. Notation follows the paper:
 `N = |P|`, `M = 1 + |Δ(P)|`, `B = N^{1/d}`, `A = B^2` (`reduction.tex:12-19`).
 
-Node IDs (`FW.*`, `red:*`, `sc:*`) refer to `BLUEPRINT.md` and the lane's `DESIGN.md`.
+Node IDs (`red:*`, `sc:*`) refer to labels in the paper (`reduction.tex` and `sparse-cones.tex`).
 -/
 
 namespace DistinctDistances

@@ -5787,7 +5787,7 @@ theorem triple_rank_identity :
               else 0) *
           ((Nat.choose (u - m + e.choose 2) (e.choose 2) : ℕ) : ℚ) := by
   classical
-  -- B13 redesign (lane m-b-hilb, NOTES): Euler recursion + kernel recursion via the
+  -- B13 redesign: Euler recursion + kernel recursion via the
   -- x0-deformation, all regularity up to direction torsion; see TripleRankRoute.lean.
   have hdeg : (parameterBaseHilbert C Γ H).totalDegree + 1 ≤ e := by
     have h1 := parameterBaseHilbert_degree C V Γ H a he hh hd R

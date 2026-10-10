@@ -28,8 +28,8 @@ noncomputable section
 namespace Request
 
 open Classical in
-/-- Track C, `ci:planar-occupancy` after the planar shortcut (`research/planar-shortcut.md`;
-track C's `TrackC.ci_planar_occupancy`, lane `lead-c`): in any dimension, a real affine plane
+/-- Track C, `ci:planar-occupancy` after the planar shortcut
+(track C's `TrackC.ci_planar_occupancy`): in any dimension, a real affine plane
 holds at most `C M^{4/3}` points. Consumer: `Reduction.card_inter_plane_le`. -/
 def PlanarOccupancy : Prop :=
   ∃ C : ℝ, 0 < C ∧ ∀ (m : ℕ) (Q : Finset (RPoint m)) (H : AffineSubspace ℝ (RPoint m)),

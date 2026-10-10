@@ -5,7 +5,7 @@ import Mathlib.Algebra.MvPolynomial.Degrees
 import Mathlib.Algebra.MvPolynomial.Monad
 
 /-!
-The finite polynomial identity in DESIGN.md's alternative for conc:deg-projective-bundle.
+The finite polynomial identity for conc:deg-projective-bundle.
 This is B13.4, the algebraic coefficient-extraction step. To use it geometrically one must
 prove B13.1–B13.3: the regular incidence embedding, its Koszul resolution, and equality
 of the actual multigraded Hilbert polynomial with this transform. No geometry or degree
@@ -38,7 +38,7 @@ noncomputable def shiftedProjectiveHilbert (n m : ℕ) : IncidenceHilbertPolynom
 
 /-- Coefficient of `z^m` in the exterior-power expression
 `(1+z)(1+A⁻¹z)^e / ((1+A⁻²z)(1+Bz))`, applied to H, with b=ell-a.
-The four indices are delta, k, l, beta from DESIGN.md. -/
+The four indices are delta, k, l, beta. -/
 noncomputable def exteriorHilbertTerm (e m : ℕ) (H : BaseHilbertPolynomial) :
     IncidenceHilbertPolynomial :=
   ∑ delta ∈ Finset.range 2,

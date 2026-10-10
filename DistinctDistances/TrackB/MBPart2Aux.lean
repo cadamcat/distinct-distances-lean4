@@ -2,7 +2,7 @@ import DistinctDistances.TrackB.MixedHilbert
 import Mathlib.LinearAlgebra.Dimension.StrongRankCondition
 
 /-!
-Evidence for lane `m-b-part2` (Track B, parts (iv)–(v) of `triple_rank_identity`).
+Evidence for Track B, parts (iv)–(v) of `triple_rank_identity`.
 
 - `dehomogenize_rank_of_weight_link`: the docstring sketch for (iv) closes once
   the two missing hypotheses (`hWlink`, `hX`) are added. The frozen statement,

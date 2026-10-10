@@ -40,4 +40,4 @@ import DistinctDistances.TrackE.OuterAssembly
 import DistinctDistances.TrackE.OuterChartRows
 
 /-! Track E: the reduction (`reduction.tex`), the sparse-cones statement (`sparse-cones.tex`)
-and the top node. See the lane's `DESIGN.md`. -/
+and the top node. -/

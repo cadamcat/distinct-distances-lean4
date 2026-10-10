@@ -7,8 +7,7 @@ import DistinctDistances.Foundations
 `π_p(q) = [q - p] ∈ ℙ^{d-1}` is track A's `radialProjection` of the complexified points
 (`ProjectivePoint d = ℙ(ℂ^d)`). The definitions below have the same bodies as track D's
 `TrackD.SpansAtMostPlane`, `TrackD.IsDirectionalFamily`, `TrackD.familyPoints` and
-`TrackD.DirIn` (lane `lead-d`, uncommitted at the time of writing); one copy should be kept when
-both reach `main`.
+`TrackD.DirIn`.
 -/
 
 namespace DistinctDistances

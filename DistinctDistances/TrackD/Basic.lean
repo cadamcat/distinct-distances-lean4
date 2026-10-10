@@ -4,8 +4,7 @@ import DistinctDistances.Foundations
 /-!
 # Track D conventions (`secants.tex`, `profiles.tex`)
 
-Every track D statement is **finitary**. The paper's asymptotic phrases are encoded as follows
-(see `runs/lanes/lead-d/DESIGN.md` §1).
+Every track D statement is **finitary**. The paper's asymptotic phrases are encoded as follows:
 
 * "`o(N^2)` along the contradiction sequence" becomes
   `∀ ε > 0, ∃ η > 0, ∃ N₀, ∀ P, N₀ ≤ |P| → M ≤ η A → … → count ≤ ε N^2`.

@@ -2,7 +2,7 @@ import DistinctDistances.TrackB.BridgesBMixedHilbert
 import DistinctDistances.TrackB.BridgesBAux
 
 /-!
-Support for `Request.pairHilbert_birational_top_coefficient` (lane bridges-b).
+Support for `Request.pairHilbert_birational_top_coefficient`.
 
 For a fixed large first degree `s` the pair Hilbert function is squeezed between
 `H_Y(t)` and `H_Y(t + s E)`:
