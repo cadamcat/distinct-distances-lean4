@@ -68,6 +68,12 @@ On 10 October 2026 (UTC), release `v1.0.0` (commit `0e56d4c94cd6af4292479c961eb3
 
 Software Heritage snapshot: [`swh:1:snp:f64f8482e9bef79632dd44dd664e6ba1bb0c3065`](https://archive.softwareheritage.org/api/1/snapshot/f64f8482e9bef79632dd44dd664e6ba1bb0c3065/) (visit of 2026-10-10 20:01 UTC).
 
+## Comparator check of v1.0.0
+
+On 11 October 2026 (UTC), `v1.0.0` (commit `0e56d4c94cd6af4292479c961eb3dff10421ef56`) was cloned again from GitHub onto a 32-core Linux machine and built with the steps of [Fresh checkout](#fresh-checkout); `lake update` ended with the hook error described above and left `lake-manifest.json` unchanged, and `lake build` exited with status 0 (10181 jobs). Comparator at `ca04cfc` then ran with [Challenge.json](../Challenge.json) and `"enable_nanoda": true`, which also replays the solution in [nanoda](https://github.com/ammkrn/nanoda_lib) (at `3a24072`), an independent type checker for Lean written in Rust, reading the export of `lean4export` at `076e8e5` (the `v4.34.0` source). Comparator exited with status 0: the statement matches the challenge, and both nanoda and the Lean kernel accept the solution with only `propext`, `Quot.sound` and `Classical.choice`. The sandbox was comparator's development stand-in for `landrun`, so the run checked the statement match and kernel acceptance without isolating the build from the code it checks. Before the run, comparator's own test suite passed on the same machine, and nanoda rejected an export that uses `sorryAx` and an export with an altered numeral.
+
+To repeat it, build `lean4export` for the project's Lean version and nanoda (`cargo build --release` in a checkout of `nanoda_lib`), set `"enable_nanoda": true` in a copy of `Challenge.json`, and run comparator with `COMPARATOR_LEAN4EXPORT`, `COMPARATOR_NANODA` (pointing to `target/release/nanoda_bin`) and `COMPARATOR_LANDRUN` set, as the Comparator repository describes.
+
 ## Statement fidelity
 
 The statement is the paper's Theorem `thm:main` (with the grid upper bound of the introduction), clause by clause:
