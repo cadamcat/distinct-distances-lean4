@@ -1,3 +1,5 @@
+[English](README.md) | [简体中文](README_zh.md)
+
 # The higher-dimensional Erdős distinct-distances bound, in Lean 4
 
 For each fixed dimension `d ≥ 3`, every `n`-point set in `ℝ^d` determines at least `c_d · n^(2/d)` distinct distances for some constant `c_d > 0`, and this order is best possible: for every `n ≥ 2` some `n`-point set determines at most `C_d · n^(2/d)` distinct distances.
