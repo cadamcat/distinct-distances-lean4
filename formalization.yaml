@@ -2,7 +2,7 @@
 version: "v0.4"
 
 project:
-  name: "A Lean 4 formalization of the higher-dimensional Erdős distinct-distances bound (JSP-000900)"
+  name: "A Lean 4 formalization of the higher-dimensional Erdős distinct-distances bound"
   description: >-
     A complete Lean 4 formalization of OpenAI's theorem that for each fixed
     dimension d >= 3, every finite point set in Euclidean d-space determines at
@@ -121,7 +121,7 @@ review:
 alignment:
   namespace: "DistinctDistances"
   statements:
-    - source: "OpenAI (2026), Theorem thm:main; JSP-000900"
+    - source: "OpenAI (2026), Theorem thm:main"
       lean: "DistinctDistances.jsp_000900"
       module: "DistinctDistances/Main.lean"
       status: "proved"

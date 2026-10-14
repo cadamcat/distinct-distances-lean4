@@ -10,7 +10,7 @@ For each fixed dimension `d ≥ 3`, every `n`-point set in `ℝ^d` determines at
 
 ## Main result
 
-The repository proves JSP-000900 as stated in [Challenge.lean](Challenge.lean):
+The repository proves the following theorem, as stated in [Challenge.lean](Challenge.lean):
 
 ```lean
 namespace DistinctDistances
@@ -79,7 +79,6 @@ The script builds `DistinctDistances.Main`, checks that `Challenge.lean` matches
 
 - OpenAI, [*The higher-dimensional Erdős distinct-distances conjecture*](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-higher-dimensional-Erdos-distinct-distances-conjecture-September-23-2026/paper.pdf), September 23, 2026.
 - P. Erdős, [On sets of distances of `n` points](https://www.renyi.hu/~p_erdos/1946-03.pdf), *American Mathematical Monthly* 53 (1946), 248–250. The planar problem has a different conjectural order.
-- JSP-000900, "What is the minimum distinct-distance count for a prescribed number of points in fixed higher dimension?" (TheJustinSunPrize/awards at `16877004`, catalog section JSP-000900).
 
 ## License
 

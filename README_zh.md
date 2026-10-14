@@ -10,7 +10,7 @@
 
 ## 主要结果
 
-本仓库证明 [Challenge.lean](Challenge.lean) 中陈述的 JSP-000900：
+本仓库证明 [Challenge.lean](Challenge.lean) 中陈述的如下定理：
 
 ```lean
 namespace DistinctDistances
@@ -79,7 +79,6 @@ LEAN_NUM_THREADS=4 ./scripts/verify.sh
 
 - OpenAI，[*The higher-dimensional Erdős distinct-distances conjecture*](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-higher-dimensional-Erdos-distinct-distances-conjecture-September-23-2026/paper.pdf)，2026 年 9 月 23 日。
 - P. Erdős，[On sets of distances of `n` points](https://www.renyi.hu/~p_erdos/1946-03.pdf)，*American Mathematical Monthly* 53 (1946)，248–250。平面情形的猜想阶不同。
-- JSP-000900，"What is the minimum distinct-distance count for a prescribed number of points in fixed higher dimension?"（TheJustinSunPrize/awards，提交 `16877004`，目录中 JSP-000900 一节）。
 
 ## 许可证
 
