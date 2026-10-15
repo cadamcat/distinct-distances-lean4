@@ -6,7 +6,7 @@ For each fixed dimension `d ≥ 3`, every `n`-point set in `ℝ^d` determines at
 
 - **Author:** Yao Xu ([@cadamcat](https://github.com/cadamcat)); see [authors and attribution](AUTHORS.md).
 - **Mathematical result:** OpenAI, [*The higher-dimensional Erdős distinct-distances conjecture*](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-higher-dimensional-Erdos-distinct-distances-conjecture-September-23-2026/paper.pdf), Theorem `thm:main` (with the matching grid upper bound of the introduction).
-- Developed by the author with AI assistance; all proofs are verified by the Lean 4 kernel.
+- Developed with AI assistance; all proofs are verified by the Lean 4 kernel.
 
 ## Main result
 

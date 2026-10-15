@@ -6,7 +6,7 @@
 
 - **作者：** Yao Xu ([@cadamcat](https://github.com/cadamcat))；见[作者与署名说明](AUTHORS.md)。
 - **数学结果：** OpenAI，[*The higher-dimensional Erdős distinct-distances conjecture*](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-higher-dimensional-Erdos-distinct-distances-conjecture-September-23-2026/paper.pdf)，定理 `thm:main`（以及引言中与之匹配的网格上界）。
-- 本项目由作者在 AI 协助下开发；所有证明均由 Lean 4 内核验证。
+- 本项目在 AI 协助下开发；所有证明均由 Lean 4 内核验证。
 
 ## 主要结果
 
